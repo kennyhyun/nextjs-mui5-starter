@@ -48,7 +48,7 @@ export const DrawerComponent = ({
       {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
       <MuiDrawer
         container={container}
-        variant='temporary'
+        variant="temporary"
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
@@ -67,7 +67,7 @@ export const DrawerComponent = ({
         {children}
       </MuiDrawer>
       <MuiDrawer
-        variant='permanent'
+        variant="permanent"
         sx={{
           display: { xs: 'none', sm: 'block' },
           '& .MuiDrawer-paper': {

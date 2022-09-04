@@ -9,9 +9,7 @@ export type MyButtonProps = MuiButtonProps & {
 export type ButtonComponentProps = MyButtonProps;
 export type ButtonContainerProps = ButtonComponentProps;
 
-export const MyButtonComponent: React.FunctionComponent<
-  ButtonComponentProps
-> = ({
+export const MyButtonComponent: React.FunctionComponent<ButtonComponentProps> = ({
   variant = 'contained',
   children = 'Emotion Button',
   suffix = '',
@@ -23,10 +21,7 @@ export const MyButtonComponent: React.FunctionComponent<
   </Button>
 );
 
-const Container: React.FunctionComponent<MyButtonProps> = ({
-  prefix = 'My ',
-  ...props
-}) => {
+const Container: React.FunctionComponent<MyButtonProps> = ({ prefix = 'My ', ...props }) => {
   const theme = useTheme();
   const styles = {
     blackButton: {

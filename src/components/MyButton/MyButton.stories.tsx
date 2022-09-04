@@ -27,9 +27,7 @@ export default {
 } as ComponentMeta<typeof MyButton>;
 
 //👇 We create a “template” of how args map to rendering
-const Template: ComponentStory<typeof MyButton> = (args) => (
-  <MyButton {...args} />
-);
+const Template: ComponentStory<typeof MyButton> = args => <MyButton {...args} />;
 
 export const Default = Template.bind({});
 Default.args = { prefix: 'My ', children: 'Button Story' };

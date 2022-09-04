@@ -12,7 +12,7 @@ export const AppBarComponent = ({
   handleDrawerToggle = (() => undefined) as () => void,
 }) => (
   <AppBar
-    position='fixed'
+    position="fixed"
     sx={{
       width: { sm: `calc(100% - ${drawerWidth}px)` },
       ml: { sm: `${drawerWidth}px` },
@@ -20,24 +20,19 @@ export const AppBarComponent = ({
   >
     <Toolbar sx={{ w: '100%', justifyContent: 'space-between' }}>
       <IconButton
-        color='inherit'
-        aria-label='open drawer'
-        edge='start'
+        color="inherit"
+        aria-label="open drawer"
+        edge="start"
         onClick={handleDrawerToggle}
-        sx={{ mr: 2, display: { sm: 'none' }, }}
+        sx={{ mr: 2, display: { sm: 'none' } }}
       >
         <MenuIcon />
       </IconButton>
 
-      <Typography align='center' variant='h6' noWrap component='div'>
+      <Typography align="center" variant="h6" noWrap component="div">
         {title}
       </Typography>
-      <IconButton
-        color='inherit'
-        aria-label='search'
-        edge='end'
-        sx={{ ml: 2 }}
-      >
+      <IconButton color="inherit" aria-label="search" edge="end" sx={{ ml: 2 }}>
         <SearchIcon />
       </IconButton>
     </Toolbar>

@@ -28,14 +28,14 @@ export const Layout: React.FunctionComponent<LayoutProps> = ({
         <CssBaseline />
         <AppBar {...{ handleDrawerToggle, drawerWidth, title }} />
         <Box
-          component='nav'
+          component="nav"
           sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-          aria-label='mailbox folders'
+          aria-label="mailbox folders"
         >
           <Drawer {...{ mobileOpen, handleDrawerToggle, drawerWidth }}>{drawerContent}</Drawer>
         </Box>
         <Box
-          component='main'
+          component="main"
           sx={{
             flexGrow: 1,
             p: { sm: 0, md: 3 },
