@@ -4,6 +4,9 @@ A starter for NextJs + MUIv5 + Storybook + Typescript
 
 Also has eslint + prettier
 
+** Generated using https://github.com/RidhoAnshory/nextjs-ts-mui5-scss-storybook-starter and
+migrated storybook with webpack5 and revised sample stories
+
 ## Getting Started
 
 ### Clone this template using one of these ways:
