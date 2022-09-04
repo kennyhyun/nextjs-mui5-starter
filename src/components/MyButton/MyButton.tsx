@@ -3,8 +3,8 @@ import { useTheme } from '@mui/material/styles';
 import * as React from 'react';
 
 export type MyButtonProps = MuiButtonProps & {
-  prefix: string;
-  suffix: string;
+  prefix?: string;
+  suffix?: string;
 };
 export type ButtonComponentProps = MyButtonProps;
 export type ButtonContainerProps = ButtonComponentProps;

@@ -1,10 +1,10 @@
 import { Box, Button, Container, Typography } from '@mui/material';
-import type { NextPage } from 'next';
+import { NextPage } from 'next';
 import Head from 'next/head';
 
+import { imageListElement } from '@/components/ImageList';
 import MyButton from '@/components/MyButton/MyButton';
-import ImageContainer from '@/containers/ImageContainer';
-import Title from '@/stories/Title/Title';
+import Title from '@/components/Title/Title';
 
 const Home: NextPage = () => {
   return (
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
             Welcome to
           </Typography>
 
-          <ImageContainer />
+          <ImageList />
 
           <Typography variant='h4' textAlign='center'>
             Starter
