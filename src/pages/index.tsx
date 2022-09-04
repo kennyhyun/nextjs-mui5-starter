@@ -18,7 +18,7 @@ const Home: NextPage = () => {
             Welcome to
           </Typography>
 
-          <ImageList />
+          {imageListElement}
 
           <Typography variant='h4' textAlign='center'>
             Starter
