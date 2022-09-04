@@ -11,7 +11,7 @@ export default {
   component: MyButton,
   argTypes: {
     variant: {
-      options: ['text', 'contained', 'outlined'],
+      options: ['text', 'contained', 'outlined', 'dashed'],
       control: { type: 'select' },
     },
     children: {
