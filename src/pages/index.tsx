@@ -12,26 +12,26 @@ const Home: NextPage = () => {
       <Head>
         <title>Homepage | Your Website</title>
       </Head>
-      <Container maxWidth='xl'>
+      <Container maxWidth="xl">
         <Box>
-          <Typography variant='h1' textAlign='center'>
+          <Typography variant="h1" textAlign="center">
             Welcome to
           </Typography>
 
           {imageListElement}
 
-          <Typography variant='h4' textAlign='center'>
+          <Typography variant="h4" textAlign="center">
             Starter
           </Typography>
         </Box>
         <Box mt={2} gap={2}>
-          <Button variant='contained'>MUI Button</Button>
-          <Button variant='dashed'>MUI Button Dashed</Button>
+          <Button variant="contained">MUI Button</Button>
+          <Button variant="dashed">MUI Button Dashed</Button>
           <MyButton />
         </Box>
 
         <Box>
-          <Title variant='h4'>Helo From Storybook MUI</Title>
+          <Title variant="h4">Helo From Storybook MUI</Title>
         </Box>
       </Container>
     </>
