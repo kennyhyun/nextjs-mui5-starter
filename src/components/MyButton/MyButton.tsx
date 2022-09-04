@@ -1,14 +1,32 @@
-import { Button as MuiButton } from '@mui/material';
+import { Button, ButtonProps as MuiButtonProps } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import * as React from 'react';
 
-export const Button = ({ blackButtonStyle = {} as any }) => (
-  <MuiButton variant='contained' sx={blackButtonStyle}>
-    Emotion Button
-  </MuiButton>
+export type MyButtonProps = MuiButtonProps & {
+  prefix: string;
+  suffix: string;
+};
+export type ButtonComponentProps = MyButtonProps;
+export type ButtonContainerProps = ButtonComponentProps;
+
+export const MyButtonComponent: React.FunctionComponent<
+  ButtonComponentProps
+> = ({
+  variant = 'contained',
+  children = 'Emotion Button',
+  suffix = '',
+  prefix = '',
+  ...props
+}) => (
+  <Button {...props} {...{ variant }}>
+    {typeof children === 'string' ? `${prefix}${children}${suffix}` : children}
+  </Button>
 );
 
-const Container = () => {
+const Container: React.FunctionComponent<MyButtonProps> = ({
+  prefix = 'My ',
+  ...props
+}) => {
   const theme = useTheme();
   const styles = {
     blackButton: {
@@ -20,7 +38,11 @@ const Container = () => {
       },
     },
   } as any;
-  return Button({ blackButtonStyle: styles.blackButton });
+  return MyButtonComponent({
+    ...props,
+    sx: { ...props.sx, ...styles.blackButton },
+    prefix,
+  });
 };
 
 export default Container;
