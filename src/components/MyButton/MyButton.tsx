@@ -23,10 +23,12 @@ export const MyButtonComponent: React.FunctionComponent<ButtonComponentProps> = 
 
 const Container: React.FunctionComponent<MyButtonProps> = ({ prefix = 'My ', ...props }) => {
   const theme = useTheme();
+  const { palette: { mode } } = theme;
+  const { variant } = props;
+  const textColor = mode === 'dark' ? 'white' : 'black';
   const styles = {
     blackButton: {
-      backgroundColor: theme.palette.primary.main,
-      color: 'white',
+      ...(variant !== 'contained' && { color: textColor }),
       width: 'fit-content',
       '&:hover': {
         backgroundColor: 'rgb(41, 38, 38)',
