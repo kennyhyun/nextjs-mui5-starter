@@ -59,7 +59,7 @@ or
 pnpm storybook
 ```
 
-Open http://localhost:6006 with your browser to see the result.
+Open http://localhost:6006 with your browser to see the stories for the components.
 
 See [src/components/MyButton/MyButton.stories.tsx](https://github.com/kennyhyun/nextjs-mui5-starter/tree/main/src/components/MyButton/MyButton.stories.tsx) and feel free to change or copy for the other component stories.
 
